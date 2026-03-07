@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Overview
 
 Tarriff Finder
@@ -16,3 +17,4 @@ Tarriff Finder
 
 ### License
 This project is licensed under the MIT License.
+
