@@ -1,4 +1,16 @@
-# TarrifFinder-Hackathon2026--7seas
+# Overview
+
+## Getting Started
 
 
-hello
+
+### Prerequisites 
+
+### Installation
+
+
+### Usage
+
+
+### License
+This project is licensed under the MIT License.
