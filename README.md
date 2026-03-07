@@ -1,12 +1,6 @@
-
+<<<<<<< HEAD
 # Overview
 
-
-
-harnoor????
-
-hanad!!!
-=======
 Tarriff Finder
 
 ## Getting Started
