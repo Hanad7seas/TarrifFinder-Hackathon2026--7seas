@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Product {
+  id            Int            @id @default(autoincrement())
+  upc           String         @unique
+  name          String
+  brand         String?
+  category      String?
+  originCountry String?        @map("origin_country")
+  originDetail  String?        @map("origin_detail")
+  hsCode        String?        @map("hs_code")
+  imageUrl      String?        @map("image_url")
+  priceCad      Decimal?       @map("price_cad") @db.Decimal(10, 2)
+  createdAt     DateTime       @default(now()) @map("created_at")
+  alternatives  Alternative[]
+  tariff        Tariff?        @relation(fields: [hsCode], references: [hsCode])
+
+  @@map("products")
+}
+
+model Tariff {
+  id             Int       @id @default(autoincrement())
+  hsCode         String    @unique @map("hs_code")
+  description    String?
+  item           String?
+  originCountry  String?   @map("origin_country")
+  tariffRate     String?   @map("tariff_rate")
+  status         String    @default("active")
+  effectiveDate  DateTime? @map("effective_date")
+  endDate        DateTime? @map("end_date")
+  legalAuthority String?   @map("legal_authority")
+  reason         String?
+  products       Product[]
+
+  @@map("tariffs")
+}
+
+model Alternative {
+  id          Int      @id @default(autoincrement())
+  productId   Int      @map("product_id")
+  altName     String   @map("alt_name")
+  altBrand    String?  @map("alt_brand")
+  altOrigin   String?  @map("alt_origin")
+  altPriceCad String?  @map("alt_price_cad")
+  badge       String?
+  isCanadian  Boolean  @default(true) @map("is_canadian")
+  product     Product  @relation(fields: [productId], references: [id])
+
+  @@map("alternatives")
+}
+
+model Industry {
+  id          Int       @id @default(autoincrement())
+  name        String
+  icon        String?
+  impactLevel String?   @map("impact_level")
+  description String?
+  companies   Company[]
+
+  @@map("industries")
+}
+
+model Company {
+  id         Int      @id @default(autoincrement())
+  industryId Int      @map("industry_id")
+  name       String
+  effect     String?
+  direction  String?
+  industry   Industry @relation(fields: [industryId], references: [id])
+
+  @@map("companies")
+}
+
+model Timeline {
+  id          Int      @id @default(autoincrement())
+  eventDate   DateTime @map("event_date")
+  description String
+  category    String?
+
+  @@map("timeline")
+}
