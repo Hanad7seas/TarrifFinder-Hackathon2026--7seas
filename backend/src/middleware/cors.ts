@@ -6,9 +6,11 @@ const allowedOrigins = process.env.ALLOWED_ORIGINS
 
 export const corsMiddleware = cors({
   origin: (origin, callback) => {
-    // Allow requests with no origin (Postman, mobile, server-to-server)
     if (!origin) return callback(null, true);
+    if (allowedOrigins.includes("*")) return callback(null, true);
     if (allowedOrigins.includes(origin)) return callback(null, true);
+    // Allow Vercel deployments (*.vercel.app)
+    if (origin.endsWith(".vercel.app")) return callback(null, true);
     callback(new Error(`CORS: origin ${origin} not allowed`));
   },
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
