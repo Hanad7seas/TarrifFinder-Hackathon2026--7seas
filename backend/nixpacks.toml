@@ -1,8 +1,8 @@
 [phases.install]
-cmds = ["npm install"]
+cmds = ["npm ci"]
 
 [phases.build]
-cmds = ["node node_modules/prisma/build/index.js generate", "node node_modules/typescript/bin/tsc"]
+cmds = ["npm run build"]
 
 [start]
 cmd = "node dist/index.js"
