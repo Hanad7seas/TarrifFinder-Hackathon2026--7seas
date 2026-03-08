@@ -60,13 +60,13 @@ const INDUSTRIES = [
     description: "25% Canadian counter-tariffs on US steel remain in effect. US charges 50% on Canadian steel. New 25% global tariff on steel derivatives since Dec 2025.",
     companies: [
       { name: "Stelco Holdings", effect: "Higher domestic demand, but US export revenue down", direction: "mixed" },
-      { name: "Algoma Steel", effect: "Benefiting from reduced import competition", direction: "up" },
+      { name: "Algoma Steel", effect: "Benefiting from reduced import competition..", direction: "up" },
       { name: "Russel Metals", effect: "Distribution costs increased; derivative tariffs add pressure..", direction: "down" },
     ]
   },
   {
     name: "Automotive", icon: "🚗", impact: "Critical",
-    description: "US 25% Section 232 auto tariff and Canadian retaliatory auto tariff both active. Cross-border supply chains severely disrupted. CUSMA-compliant vehicles exempt.",
+    description: "US 25% Section 232 auto tariff and Canadian retaliatory auto tariff both active! Cross-border supply chains severely disrupted. CUSMA-compliant vehicles exempt.",
     companies: [
       { name: "Magna International", effect: "Supply chain restructuring; $3-4B tariff cost estimated industry-wide", direction: "down" },
       { name: "Linamar Corp", effect: "Shifting to domestic sourcing where possible", direction: "mixed" },
