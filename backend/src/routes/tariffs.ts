@@ -29,7 +29,8 @@ router.get(
   "/:hsCode",
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { hsCode } = req.params;
+      const rawHsCode = req.params.hsCode;
+      const hsCode = Array.isArray(rawHsCode) ? rawHsCode[0] : rawHsCode;
 
       const tariff = await prisma.tariff.findUnique({
         where: { hsCode },

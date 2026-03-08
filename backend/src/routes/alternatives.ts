@@ -8,7 +8,10 @@ router.get(
   "/:productId",
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const productId = parseInt(req.params.productId);
+      const rawProductId = req.params.productId;
+      const productId = Number(
+        Array.isArray(rawProductId) ? rawProductId[0] : rawProductId
+      );
 
       if (isNaN(productId)) {
         return res.status(400).json({ error: "productId must be a number" });
