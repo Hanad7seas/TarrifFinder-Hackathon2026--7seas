@@ -109,7 +109,7 @@ const StatusPill = ({ active }: { active: boolean }) => (
 );
 
 // ── YOUR FRIEND FILLS THIS IN ──────────────────────────────
-const API_BASE_URL = ""; // e.g. "https://tariffshield-api.railway.app"
+const API_BASE_URL = "http://localhost:5000";
 // ──────────────────────────────────────────────────────────
 
 export default function TariffShield() {
