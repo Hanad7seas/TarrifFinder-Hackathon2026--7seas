@@ -2,7 +2,7 @@
 cmds = ["npm install"]
 
 [phases.build]
-cmds = ["node node_modules/.bin/prisma generate"]
+cmds = ["npm run build"]
 
 [start]
 cmd = "node node_modules/.bin/ts-node --transpile-only src/index.ts"
