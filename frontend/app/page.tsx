@@ -190,7 +190,7 @@ export default function TariffShield() {
             </div>
           </div>
           <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-            <span style={{ padding: "4px 12px", borderRadius: 999, fontSize: 10, fontWeight: 700, background: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.7)" }}>Updated: Mar 7, 2026</span>
+            <span style={{ padding: "4px 12px", borderRadius: 999, fontSize: 10, fontWeight: 700, background: "rgba(255,255,255,0.1)", color: "rgba(255,255,255,0.7)" }}>Updated: {new Date().toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" })}</span>
             <span style={{ fontSize: 22 }}>🍁</span>
           </div>
         </div>
@@ -434,7 +434,7 @@ export default function TariffShield() {
 
       <footer style={{ background: dark, color: "rgba(255,255,255,0.5)", padding: "20px", textAlign: "center", fontSize: 11.5, borderTop: `3px solid ${red}` }}>
         <div style={{ marginBottom: 3 }}><span style={{ fontFamily: displayFont, fontWeight: 800, color: "#fff", fontSize: 13.5 }}>TariffShield</span><span style={{ margin: "0 8px", opacity: 0.3 }}>|</span>Helping Canadians make informed purchasing decisions</div>
-        <div>Data verified Mar 7, 2026. HS codes per WCO / CBSA Customs Tariff. Not financial advice.</div>
+        <div>Data verified {new Date().toLocaleDateString("en-CA", { month: "short", day: "numeric", year: "numeric" })}. HS codes per WCO / CBSA Customs Tariff. Not financial advice.</div>
       </footer>
 
       <style>{`
