@@ -66,6 +66,7 @@ Chronological view of all tariff-related events including implementation dates, 
 - **npm** or **yarn**
 - **PostgreSQL** (or a free [Supabase](https://supabase.com) account)
 - **Git**
+- **Heading to the data branch and copying**
 
 ### Installation
 
