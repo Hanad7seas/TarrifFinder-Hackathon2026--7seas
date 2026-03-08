@@ -128,7 +128,7 @@ const StatusPill = ({ active }: { active: boolean }) => (
 );
 
 // ── YOUR FRIEND FILLS THIS IN ──────────────────────────────
-const API_BASE_URL = "http://localhost:5000";
+const API_BASE_URL = "https://tarriffinder-hackathon2026-7seas-production.up.railway.app";
 // ──────────────────────────────────────────────────────────
 
 export default function TariffShield() {
