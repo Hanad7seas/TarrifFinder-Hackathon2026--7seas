@@ -4,8 +4,8 @@
     "builder": "NIXPACKS"
   },
   "deploy": {
-    "buildCommand": "npm install && npx prisma generate",
-    "startCommand": "npx ts-node --transpile-only src/index.ts",
+    "buildCommand": "npm install && node node_modules/prisma/build/index.js generate && node node_modules/typescript/bin/tsc",
+    "startCommand": "node dist/index.js",
     "restartPolicyType": "ON_FAILURE"
   }
 }

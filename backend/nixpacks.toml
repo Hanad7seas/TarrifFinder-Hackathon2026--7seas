@@ -2,7 +2,7 @@
 cmds = ["npm ci"]
 
 [phases.build]
-cmds = ["npm run build"]
+cmds = ["node node_modules/prisma/build/index.js generate", "node node_modules/typescript/bin/tsc"]
 
 [start]
 cmd = "node dist/index.js"
