@@ -2,7 +2,7 @@
 cmds = ["npm install"]
 
 [phases.build]
-cmds = ["npx prisma generate"]
+cmds = ["node node_modules/.bin/prisma generate"]
 
 [start]
-cmd = "npx ts-node --transpile-only src/index.ts"
+cmd = "node node_modules/.bin/ts-node --transpile-only src/index.ts"
