@@ -61,7 +61,7 @@ const INDUSTRIES = [
     companies: [
       { name: "Stelco Holdings", effect: "Higher domestic demand, but US export revenue down", direction: "mixed" },
       { name: "Algoma Steel", effect: "Benefiting from reduced import competition", direction: "up" },
-      { name: "Russel Metals", effect: "Distribution costs increased; derivative tariffs add pressure", direction: "down" },
+      { name: "Russel Metals", effect: "Distribution costs increased; derivative tariffs add pressure.", direction: "down" },
     ]
   },
   {
