@@ -238,11 +238,10 @@ This project is licensed under the MIT License.
 
 ---
 
-## Acknowledgements
+## DISCLOSURE
 
 - Government of Canada for open tariff data
 - [Supabase](https://supabase.com) for database hosting
 - [Vercel](https://vercel.com) for frontend deployment
 - Used Claude for build, Cursor for Debug, OpenAi for organization. 
-=======
->>>>>>> origin/main
+
