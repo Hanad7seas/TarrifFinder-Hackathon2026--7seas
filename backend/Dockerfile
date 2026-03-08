@@ -11,7 +11,7 @@ COPY prisma ./prisma/
 RUN npx prisma generate
 
 COPY . .
-RUN npx tsc
+RUN ./node_modules/.bin/tsc
 
 EXPOSE 5000
 
