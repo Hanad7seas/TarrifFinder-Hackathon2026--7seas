@@ -19,6 +19,7 @@ const TARIFF_INFO = {
 };
 
 const IMPORT_TARIFFS = [
+  // ── Active tariffs ────────────────────────────────────────────────────────
   { item: "Hot-Rolled Steel Coil", hs: "7208.10", rate: "25%", origin: "United States", status: "active", reason: "Canadian retaliatory tariff on US steel under Steel & Aluminum Order (SOR/2025-95). No CUSMA exemption." },
   { item: "Cold-Rolled Steel Sheet", hs: "7209.15", rate: "25%", origin: "United States", status: "active", reason: "Canadian retaliatory tariff on US steel. Remains in effect." },
   { item: "Aluminum Unwrought", hs: "7601.10", rate: "25%", origin: "United States", status: "active", reason: "Canadian retaliatory tariff on US aluminum. Remission for manufacturing use extended to June 30, 2026." },
@@ -28,11 +29,29 @@ const IMPORT_TARIFFS = [
   { item: "Steel Doors & Windows", hs: "7308.30", rate: "25%", origin: "All Countries", status: "active", reason: "New 25% Canadian tariff on steel derivative products from ALL countries, effective Dec 26, 2025." },
   { item: "Steel Nails, Fasteners", hs: "7317.00", rate: "25%", origin: "All Countries", status: "active", reason: "Global 25% tariff on steel derivatives effective Dec 26, 2025." },
   { item: "Chinese EV Batteries", hs: "8507.60", rate: "100%", origin: "China", status: "active", reason: "100% tariff on Chinese EVs and EV components." },
-  { item: "Orange Juice (was Tropicana etc.)", hs: "2009.12", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs (Mar 4 – Sept 1, 2025). Removed Sept 1, 2025." },
-  { item: "Bourbon / Whiskey (was Jack Daniel's etc.)", hs: "2208.30", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
-  { item: "Beer (was Budweiser etc.)", hs: "2203.00", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
-  { item: "Coffee, roasted (was Folgers etc.)", hs: "0901.21", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
-  { item: "Peanut Butter (was Skippy etc.)", hs: "2008.11", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  // ── Phase 1 removed tariffs (Mar 4 – Sept 1, 2025) ───────────────────────
+  { item: "Orange Juice (Tropicana, Minute Maid)", hs: "2009.12", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs (Mar 4 – Sept 1, 2025). Removed Sept 1, 2025." },
+  { item: "Cranberry & Fruit Juice (Ocean Spray)", hs: "2009.89", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs (Mar 4 – Sept 1, 2025). Removed effective Sept 1, 2025." },
+  { item: "Soft Drinks (Pepsi, Coca-Cola, Mountain Dew)", hs: "2202.10", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs (Mar 4 – Sept 1, 2025). Removed effective Sept 1, 2025." },
+  { item: "Bourbon / Whiskey (Jack Daniel's, Jim Beam)", hs: "2208.30", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Beer (Budweiser, Coors Light)", hs: "2203.00", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Coffee, roasted (Folgers)", hs: "0901.21", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Peanut Butter (Skippy, Kraft)", hs: "2008.11", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Ketchup & Tomato Sauces (Heinz)", hs: "2103.20", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Mustard & Sauces (French's)", hs: "2103.30", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Dressings & Condiments (Hidden Valley)", hs: "2103.90", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Soups & Broths (Campbell's)", hs: "2104.10", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Chips & Snacks (Doritos, Lay's, Kraft Dinner)", hs: "2106.90", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Breakfast Cereals (Cheerios, Corn Flakes)", hs: "1904.10", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Granola Bars & Oats (Quaker, Nature Valley)", hs: "1904.20", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Cookies & Biscuits (Oreo)", hs: "1905.31", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Candy & Confectionery (M&M's)", hs: "1704.90", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Chocolate (Hershey's, Reese's)", hs: "1806.32", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Jams, Jellies & Syrups (Aunt Jemima)", hs: "2007.99", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Laundry & Dish Detergents (Tide, Dawn)", hs: "3402.20", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Cleaning Sprays (Windex, Febreze)", hs: "3402.90", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Toothpaste (Colgate, Crest)", hs: "3306.10", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
+  { item: "Wine", hs: "2204.21", rate: "0%", origin: "United States", status: "removed", reason: "Was 25% under Phase 1 retaliatory tariffs. Removed effective Sept 1, 2025." },
 ];
 
 const INDUSTRIES = [
